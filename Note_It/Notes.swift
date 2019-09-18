@@ -44,7 +44,7 @@ class Notes {
     }
     
     public func insert(note newNote: Note, at index: Int) throws {
-        if self.notes.indices.contains(index) {
+        if self.notes.indices.contains(index) || self.count == index{
             self.notes.insert(newNote, at: index)
         } else {
             throw NoteError.outOfRange(index)

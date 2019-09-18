@@ -68,41 +68,53 @@ class ListController: UITableViewController, UpdateDelagate {
         }
         
     }
+    
+    @IBAction func editTable() {
+        self.notesTableView.isEditing = !self.notesTableView.isEditing
+    }
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
-
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            do {
+                try Notes.sharedInstance.remove(at: indexPath.row)
+            } catch {
+                print("error delting note")
+            }
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
 
-    /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        
+            print(">>> index \(fromIndexPath.row) >>> to index \(to.row)")
+            
+        do {
+            let moveNote = try Notes.sharedInstance.getNote(atIndex: fromIndexPath.row)
+            try Notes.sharedInstance.remove(at: fromIndexPath.row)
+            try Notes.sharedInstance.insert(note: moveNote, at: to.row)
+        }
+        catch {
+            print(">>> error moving note")
+            
+        }
 
     }
-    */
 
-    /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
 
     
     // MARK: - Navigation

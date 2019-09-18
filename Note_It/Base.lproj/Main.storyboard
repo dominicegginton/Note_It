@@ -48,9 +48,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Note It" id="bPm-iu-oc2">
-                        <barButtonItem key="rightBarButtonItem" title="New Note" id="xrF-bj-FVR">
+                        <barButtonItem key="leftBarButtonItem" title="New Note" id="xrF-bj-FVR">
                             <connections>
                                 <action selector="newNote" destination="GSL-KV-1bY" id="IG0-Bk-Nta"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="ATS-TE-Ieq">
+                            <connections>
+                                <action selector="editTable" destination="GSL-KV-1bY" id="Jir-hT-KSo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
