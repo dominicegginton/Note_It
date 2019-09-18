@@ -17,7 +17,7 @@
 		F2A6FEE0233225BB0020E548 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6FEDF233225BB0020E548 /* Notes.swift */; };
 		F2A6FEE8233231E60020E548 /* NotesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6FEE7233231E60020E548 /* NotesTest.swift */; };
 		F2A6FEEE2332367E0020E548 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6FEED2332367E0020E548 /* NoteController.swift */; };
-		F2A6FEF02332368F0020E548 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6FEEF2332368F0020E548 /* ListController.swift */; };
+		F2A6FF2F23326FA30020E548 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6FF2E23326FA30020E548 /* ListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		F2A6FEDF233225BB0020E548 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		F2A6FEE7233231E60020E548 /* NotesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTest.swift; sourceTree = "<group>"; };
 		F2A6FEED2332367E0020E548 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
-		F2A6FEEF2332368F0020E548 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		F2A6FF2E23326FA30020E548 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 				F2A6FEB5233220EC0020E548 /* Note_It.xcdatamodeld */,
 				F2A6FEDF233225BB0020E548 /* Notes.swift */,
 				F2A6FEED2332367E0020E548 /* NoteController.swift */,
-				F2A6FEEF2332368F0020E548 /* ListController.swift */,
+				F2A6FF2E23326FA30020E548 /* ListController.swift */,
 			);
 			path = Note_It;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2A6FEB7233220EC0020E548 /* Note_It.xcdatamodeld in Sources */,
-				F2A6FEF02332368F0020E548 /* ListController.swift in Sources */,
+				F2A6FF2F23326FA30020E548 /* ListController.swift in Sources */,
 				F2A6FEEE2332367E0020E548 /* NoteController.swift in Sources */,
 				F2A6FEAF233220EC0020E548 /* AppDelegate.swift in Sources */,
 				F2A6FEE0233225BB0020E548 /* Notes.swift in Sources */,

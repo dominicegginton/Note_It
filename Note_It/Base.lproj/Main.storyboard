@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6aJ-MS-Iny">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,30 +23,33 @@
             </objects>
             <point key="canvasLocation" x="1313" y="-202"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Note It-->
         <scene sceneID="YbE-GS-Fcm">
             <objects>
-                <tableViewController id="GSL-KV-1bY" sceneMemberID="viewController">
+                <tableViewController id="GSL-KV-1bY" customClass="ListController" customModule="Note_It" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GzI-m1-Whx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NaA-Bt-Hdm">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Note" id="NaA-Bt-Hdm">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NaA-Bt-Hdm" id="ZGZ-lg-TVz">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="GSL-KV-1bY" id="J60-ij-sMy"/>
-                            <outlet property="delegate" destination="GSL-KV-1bY" id="aeK-SF-HUb"/>
+                            <outlet property="dataSource" destination="GSL-KV-1bY" id="80L-s1-WzY"/>
+                            <outlet property="delegate" destination="GSL-KV-1bY" id="Cd6-3y-qiM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="bPm-iu-oc2"/>
+                    <navigationItem key="navigationItem" title="Note It" id="bPm-iu-oc2"/>
+                    <connections>
+                        <outlet property="notesTableView" destination="GzI-m1-Whx" id="jjt-UA-AJN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2kg-3h-FzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,17 +87,17 @@
             </objects>
             <point key="canvasLocation" x="2165" y="242"/>
         </scene>
-        <!--View Controller-->
+        <!--Note-->
         <scene sceneID="uJr-cl-SvM">
             <objects>
-                <viewController id="uEC-Po-9gU" sceneMemberID="viewController">
+                <viewController id="uEC-Po-9gU" customClass="NoteController" customModule="Note_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YIb-MC-vsS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cXi-pr-546"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rFf-JT-pqf"/>
+                    <navigationItem key="navigationItem" title="Note" id="rFf-JT-pqf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLK-BP-2H9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
