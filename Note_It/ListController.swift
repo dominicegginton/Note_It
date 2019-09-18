@@ -53,6 +53,21 @@ class ListController: UITableViewController, UpdateDelagate {
 
         return cell
     }
+    
+    @IBAction func newNote() {
+        
+        do {
+            try Notes.sharedInstance.add(note: Note(title: "New Note", text: ""))
+            self.notesTableView.reloadData()
+            let indexPath = IndexPath(row: Notes.sharedInstance.count - 1, section: 0)
+            self.notesTableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+            performSegue(withIdentifier: "showNote", sender: nil)
+            
+        } catch {
+            print("error adding new note")
+        }
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.

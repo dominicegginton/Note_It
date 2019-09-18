@@ -47,7 +47,13 @@
                             <outlet property="delegate" destination="GSL-KV-1bY" id="Cd6-3y-qiM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Note It" id="bPm-iu-oc2"/>
+                    <navigationItem key="navigationItem" title="Note It" id="bPm-iu-oc2">
+                        <barButtonItem key="rightBarButtonItem" title="New Note" id="xrF-bj-FVR">
+                            <connections>
+                                <action selector="newNote" destination="GSL-KV-1bY" id="IG0-Bk-Nta"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="notesTableView" destination="GzI-m1-Whx" id="jjt-UA-AJN"/>
                     </connections>

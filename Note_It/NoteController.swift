@@ -43,14 +43,21 @@ class NoteController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
             // load note data into text feilds
             if let note = try? Notes.sharedInstance.getNote(atIndex: id) {
                 self.title = note.title
-                self.noteTitleTextFeild.text = note.title
+                if note.title == "New Note" {
+                    self.noteTitleTextFeild.text = ""
+                } else {
+                    self.noteTitleTextFeild.text = note.title
+                }
                 self.noteTextView.text = note.text
             }
         }
     }
     
     func saveNote() {
-        let noteTitle = self.noteTitleTextFeild.text ?? "New Note"
+        var noteTitle = self.noteTitleTextFeild.text ?? "New Note"
+        if noteTitle == "" {
+            noteTitle = "New Note"
+        }
         
         let noteText = self.noteTextView.text ?? ""
         
