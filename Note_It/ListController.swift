@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListController: UITableViewController {
+class ListController: UITableViewController, UpdateDelagate {
 
     @IBOutlet var notesTableView: UITableView!
     
@@ -20,14 +20,12 @@ class ListController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        do {
-            try Notes.sharedInstance.add(note: Note(title: "Test 1", text: "Testing 1"))
-            try Notes.sharedInstance.add(note: Note(title: "Test 1", text: "Testing 1"))
-            print(Notes.sharedInstance.count)
-        } catch {
-            print("error adding notes")
-        }
+    }
+    
+    func update(with note: Note, at index: Int) {
+        print("delagate method called with note title \(note.title) at index \(index)")
+        try? Notes.sharedInstance.update(note: note, at: index)
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -91,14 +89,28 @@ class ListController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showNote" {
+            print("segue with \(segue.identifier!) indentifier triggered")
+            if let indexPath = self.notesTableView.indexPathForSelectedRow {
+                print("found row \(indexPath.row)")
+                if let navigationController = segue.destination as? UINavigationController {
+                    if let noteController = navigationController.topViewController as? NoteController {
+                        print("Note controller found")
+                        noteController.noteID = indexPath.row
+                        noteController.delagate = self
+                    }
+                }
+            }
+        }
     }
-    */
+    
 
 }
