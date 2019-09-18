@@ -108,15 +108,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5At-Ya-TsF">
-                                <rect key="frame" x="0.0" y="108" width="414" height="34"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="Bur-nt-Qmw"/>
+                                    <constraint firstAttribute="height" constant="45" id="Bur-nt-Qmw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XWI-ba-1Jy">
-                                <rect key="frame" x="0.0" y="162" width="414" height="680"/>
+                                <rect key="frame" x="0.0" y="173" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
