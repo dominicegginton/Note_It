@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol DeleteDelegate {
+    func deleteNote(at index: Int)
+}
+
 class ListController: UITableViewController, UpdateDelagate {
 
     @IBOutlet var notesTableView: UITableView!
+    
+    var deleteDelegate: DeleteDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +96,7 @@ class ListController: UITableViewController, UpdateDelagate {
                 print("error delting note")
             }
             tableView.deleteRows(at: [indexPath], with: .fade)
+            deleteDelegate?.deleteNote(at: indexPath.row)
         }
     }
 
@@ -132,7 +139,8 @@ class ListController: UITableViewController, UpdateDelagate {
                     if let noteController = navigationController.topViewController as? NoteController {
                         print("Note controller found")
                         noteController.noteID = indexPath.row
-                        noteController.delagate = self
+                        noteController.updateDelagate = self
+                        self.deleteDelegate = noteController
                     }
                 }
             }

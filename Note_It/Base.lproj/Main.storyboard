@@ -11,7 +11,7 @@
         <!--Split View Controller-->
         <scene sceneID="9Q9-JP-jfd">
             <objects>
-                <splitViewController id="6aJ-MS-Iny" sceneMemberID="viewController">
+                <splitViewController id="6aJ-MS-Iny" customClass="SplitViewController" customModule="Note_It" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="lpF-aA-QuD" kind="relationship" relationship="masterViewController" id="Yxs-jm-NCb"/>
                         <segue destination="Sh3-Dk-0EO" kind="relationship" relationship="detailViewController" id="RXt-U9-DYr"/>
@@ -108,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5At-Ya-TsF">
-                                <rect key="frame" x="0.0" y="108" width="414" height="45"/>
+                                <rect key="frame" x="20" y="108" width="374" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Bur-nt-Qmw"/>
                                 </constraints>
@@ -116,7 +116,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XWI-ba-1Jy">
-                                <rect key="frame" x="0.0" y="173" width="414" height="669"/>
+                                <rect key="frame" x="10" y="173" width="394" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -125,11 +125,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="cXi-pr-546" firstAttribute="trailing" secondItem="5At-Ya-TsF" secondAttribute="trailing" id="7Yd-kw-ikZ"/>
-                            <constraint firstItem="5At-Ya-TsF" firstAttribute="leading" secondItem="cXi-pr-546" secondAttribute="leading" id="9I5-AV-ppX"/>
+                            <constraint firstItem="cXi-pr-546" firstAttribute="trailing" secondItem="5At-Ya-TsF" secondAttribute="trailing" constant="20" id="7Yd-kw-ikZ"/>
+                            <constraint firstItem="5At-Ya-TsF" firstAttribute="leading" secondItem="cXi-pr-546" secondAttribute="leading" constant="20" id="9I5-AV-ppX"/>
                             <constraint firstItem="cXi-pr-546" firstAttribute="bottom" secondItem="XWI-ba-1Jy" secondAttribute="bottom" constant="20" id="b7w-wk-Lz3"/>
-                            <constraint firstItem="cXi-pr-546" firstAttribute="trailing" secondItem="XWI-ba-1Jy" secondAttribute="trailing" id="eJM-At-kqq"/>
-                            <constraint firstItem="XWI-ba-1Jy" firstAttribute="leading" secondItem="cXi-pr-546" secondAttribute="leading" id="isx-Bh-kP1"/>
+                            <constraint firstItem="cXi-pr-546" firstAttribute="trailing" secondItem="XWI-ba-1Jy" secondAttribute="trailing" constant="10" id="eJM-At-kqq"/>
+                            <constraint firstItem="XWI-ba-1Jy" firstAttribute="leading" secondItem="cXi-pr-546" secondAttribute="leading" constant="10" id="isx-Bh-kP1"/>
                             <constraint firstItem="XWI-ba-1Jy" firstAttribute="top" secondItem="5At-Ya-TsF" secondAttribute="bottom" constant="20" id="t3D-6b-dUY"/>
                             <constraint firstItem="5At-Ya-TsF" firstAttribute="top" secondItem="cXi-pr-546" secondAttribute="top" constant="20" id="xqP-1N-zSt"/>
                         </constraints>
@@ -155,6 +155,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gqR-FK-Xzh"/>
+        <segue reference="RXt-U9-DYr"/>
     </inferredMetricsTieBreakers>
 </document>

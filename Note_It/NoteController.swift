@@ -12,7 +12,7 @@ protocol UpdateDelagate {
     func update(with note: Note, at index: Int)
 }
 
-class NoteController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+class NoteController: UIViewController, UITextFieldDelegate, UITextViewDelegate, DeleteDelegate{
     
 
     @IBOutlet weak var doneButton: UIBarButtonItem!
@@ -21,7 +21,7 @@ class NoteController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
     @IBOutlet weak var noteTextViewBottomConstraint: NSLayoutConstraint!
     
     public var noteID: Int?
-    var delagate: UpdateDelagate?
+    var updateDelagate: UpdateDelagate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,10 @@ class NoteController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         // set text feilds delegates
         self.noteTitleTextFeild.delegate = self
         self.noteTextView.delegate = self
+        
+        // set text feilds to hidden
+        self.noteTitleTextFeild.isHidden = true
+        self.noteTextView.isHidden = true
         
         // set clear color for done button
         self.doneButton.tintColor = UIColor.clear
@@ -40,6 +44,10 @@ class NoteController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         if let id: Int = noteID {
             print("view did load with note \(id)")
             
+            //unhide text feilds
+            self.noteTitleTextFeild.isHidden = false
+            self.noteTextView.isHidden = false
+            
             // load note data into text feilds
             if let note = try? Notes.sharedInstance.getNote(atIndex: id) {
                 self.title = note.title
@@ -49,6 +57,7 @@ class NoteController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
                     self.noteTitleTextFeild.text = note.title
                 }
                 self.noteTextView.text = note.text
+                
             }
         }
     }
@@ -66,7 +75,7 @@ class NoteController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         let note = Note(title: noteTitle, text: noteText)
         if let id = self.noteID {
             print("Saveing Note with \(id)")
-            self.delagate?.update(with: note, at: id)
+            self.updateDelagate?.update(with: note, at: id)
         }
     }
     
@@ -113,6 +122,17 @@ class NoteController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         
         // ajust constraint for noteTextView for keyabord
         self.noteTextViewBottomConstraint.constant = 20
+    }
+    
+    func deleteNote(at index: Int) {
+        if index == self.noteID {
+            self.noteTitleTextFeild.text = ""
+            self.noteTitleTextFeild.isHidden = true
+            self.noteTextView.text = ""
+            self.noteTextView.isHidden = true
+            self.title = ""
+            print("clearing note view")
+        }
     }
     
 }
