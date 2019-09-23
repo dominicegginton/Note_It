@@ -19,6 +19,8 @@
 		F2A6FEE8233231E60020E548 /* NotesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6FEE7233231E60020E548 /* NotesTest.swift */; };
 		F2A6FEEE2332367E0020E548 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6FEED2332367E0020E548 /* NoteController.swift */; };
 		F2A6FF2F23326FA30020E548 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6FF2E23326FA30020E548 /* ListController.swift */; };
+		F2F4B0182338BFB200980CEA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F2F4B0162338BFB200980CEA /* .gitignore */; };
+		F2F4B0192338BFB200980CEA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F2F4B0172338BFB200980CEA /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		F2A6FEE7233231E60020E548 /* NotesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTest.swift; sourceTree = "<group>"; };
 		F2A6FEED2332367E0020E548 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 		F2A6FF2E23326FA30020E548 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		F2F4B0162338BFB200980CEA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F2F4B0172338BFB200980CEA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		F2A6FEA2233220EB0020E548 = {
 			isa = PBXGroup;
 			children = (
+				F2F4B0162338BFB200980CEA /* .gitignore */,
+				F2F4B0172338BFB200980CEA /* README.md */,
 				F2A6FEAD233220EC0020E548 /* Note_It */,
 				F2A6FEC5233220F10020E548 /* Note_ItTests */,
 				F2A6FED0233220F10020E548 /* Note_ItUITests */,
@@ -247,7 +253,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2F4B0182338BFB200980CEA /* .gitignore in Resources */,
 				F2A6FEBC233220F10020E548 /* LaunchScreen.storyboard in Resources */,
+				F2F4B0192338BFB200980CEA /* README.md in Resources */,
 				F2A6FEB9233220F10020E548 /* Assets.xcassets in Resources */,
 				F2A6FEB4233220EC0020E548 /* Main.storyboard in Resources */,
 			);
