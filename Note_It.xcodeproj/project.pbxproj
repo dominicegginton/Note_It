@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F250ADEE2334E3F700A79B6C /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F250ADED2334E3F700A79B6C /* SplitViewController.swift */; };
-		F250ADF02334ECB100A79B6C /* UITestsPortrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = F250ADEF2334ECB100A79B6C /* UITestsPortrait.swift */; };
 		F2A6FEAF233220EC0020E548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6FEAE233220EC0020E548 /* AppDelegate.swift */; };
 		F2A6FEB4233220EC0020E548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A6FEB2233220EC0020E548 /* Main.storyboard */; };
 		F2A6FEB7233220EC0020E548 /* Note_It.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2A6FEB5233220EC0020E548 /* Note_It.xcdatamodeld */; };
@@ -41,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		F250ADED2334E3F700A79B6C /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplitViewController.swift; path = ../../../../../System/Volumes/Data/Users/dom/Projects/Note_It/Note_It/SplitViewController.swift; sourceTree = "<group>"; };
-		F250ADEF2334ECB100A79B6C /* UITestsPortrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITestsPortrait.swift; path = ../../../../../System/Volumes/Data/Users/dom/Projects/Note_It/Note_ItUITests/UITestsPortrait.swift; sourceTree = "<group>"; };
 		F2A6FEAB233220EC0020E548 /* Note_It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note_It.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A6FEAE233220EC0020E548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2A6FEB3233220EC0020E548 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 			children = (
 				F2A6FED1233220F10020E548 /* Note_ItUITests.swift */,
 				F2A6FED3233220F10020E548 /* Info.plist */,
-				F250ADEF2334ECB100A79B6C /* UITestsPortrait.swift */,
 			);
 			path = Note_ItUITests;
 			sourceTree = "<group>";
@@ -299,7 +296,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F250ADF02334ECB100A79B6C /* UITestsPortrait.swift in Sources */,
 				F2A6FED2233220F10020E548 /* Note_ItUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

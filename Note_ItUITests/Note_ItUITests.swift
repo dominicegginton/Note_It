@@ -26,9 +26,29 @@ class Note_ItUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAddEmptyNote() {
+        let app = XCUIApplication()
+        // Open new Note
+        app.buttons["newNoteButton"].tap()
+        XCTAssertTrue(app.navigationBars["New Note"].exists)
+        // Save empty note and goto main screne
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+    }
+    
+    func testAddTestNote() {
+        let app = XCUIApplication()
+        // Open new note
+        app.buttons["newNoteButton"].tap()
+        XCTAssertTrue(app.navigationBars["New Note"].exists)
+        // Type Note Text
+        app.textFields["noteTitleText"].tap()
+        app.textFields["noteTitleText"].typeText("Test Note")
+        app.textViews["noteTextArea"].tap()
+        app.textViews["noteTextArea"].typeText("This is the boady of the test note")
+        // Save note and goto main screen
+        app.buttons["doneButton"].tap()
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        // Check if note was added to table view
     }
 
 }

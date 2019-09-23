@@ -49,11 +49,17 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Note It" id="bPm-iu-oc2">
                         <barButtonItem key="leftBarButtonItem" title="New Note" id="xrF-bj-FVR">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="newNoteButton"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="newNote" destination="GSL-KV-1bY" id="IG0-Bk-Nta"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="ATS-TE-Ieq">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="editButton"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="editTable" destination="GSL-KV-1bY" id="Jir-hT-KSo"/>
                             </connections>
@@ -114,6 +120,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="noteTitleText"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XWI-ba-1Jy">
                                 <rect key="frame" x="10" y="173" width="394" height="669"/>
@@ -121,6 +130,9 @@
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="noteTextArea"/>
+                                </userDefinedRuntimeAttributes>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -137,6 +149,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Note" id="rFf-JT-pqf">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="xAp-vU-gax">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="doneButton"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="dismissKeybaord:" destination="uEC-Po-9gU" id="n5j-MZ-BSs"/>
                             </connections>
